@@ -1,0 +1,14 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+london-housing-480514-f1d0c2e69c87.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints (optional)
+.ipynb_checkpoints/
+
