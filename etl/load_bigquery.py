@@ -57,5 +57,8 @@ if __name__ == "__main__":
     except Exception as e:
         print(f"There was an error: {e}")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/aladon090-dbt
 

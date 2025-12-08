@@ -1,0 +1,12 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: london-housing-480514
+      dataset: housing_london
+      threads: 1
+      location: EU
+      timeout_seconds: 300
+
