@@ -1,0 +1,11 @@
+london_housing:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account-json
+      project: london-housing-480514
+      dataset: housing_london
+      keyfile: /workspaces/London_blackcab/london-housing-480514-f1d0c2e69c87.json
+      threads: 1
+      location: EU
