@@ -33,7 +33,7 @@ if __name__ == '__main__':
     try:
         FILE = "Data/housing_in_london_monthly_variables.csv"
         CHUNK = 10000
-        PARQUET_FILE = "Data/housing_in_london_monthly_variables.parquet"
+        PARQUET_FILE = "/workspaces/London_blackcab/Data/housing_in_london_monthly_variables.csv"
 
         # Make sure output folder exists
         os.makedirs(os.path.dirname(PARQUET_FILE), exist_ok=True)
