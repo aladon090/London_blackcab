@@ -1,0 +1,52 @@
+version: 2
+
+# --- Sources ---
+sources:
+  - name: london_blackcab       # BigQuery dataset name
+    database: london-housing-480514   # your project ID
+    schema: housing_london      # your new dataset name
+    tables:
+      - name: housing_data      # table name
+
+# --- Models ---
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_housing
+    description: "Staging model for housing data"
+    columns:
+      - name: date
+        description: "Date of record"
+        tests:
+          - not_null
+      - name: area
+        description: "Area name"
+      - name: price_float
+        description: "Average price as float"
+
+  - name: mart_hounslow
+    description: "Aggregated housing and crime stats for Hounslow"
+    columns:
+      - name: avg_price
+        description: "Average housing price"
+      - name: total_sales
+        description: "Total houses sold"
+      - name: total_crimes
+        description: "Total crimes reported"
+
